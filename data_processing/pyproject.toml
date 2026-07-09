@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69.5.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ashare-data-processing"
+version = "0.1.0"
+description = "Standalone A-share market data acquisition, storage, and quality-check module."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "J1ger" }
+]
+dependencies = [
+  "numpy==1.26.4",
+  "pandas==2.2.2",
+  "akshare==1.18.64"
+]
+
+[tool.setuptools]
+py-modules = ["providers", "quality", "storage", "exceptions"]
