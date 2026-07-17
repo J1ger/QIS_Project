@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69.5.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ashare-factor-selection"
+version = "0.2.0"
+description = "Standalone factor evaluation, diagnosis, orthogonalization, and selection module for A-share research."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "J1ger" }
+]
+dependencies = [
+  "numpy==1.26.4",
+  "pandas==2.2.2"
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.2"]
+
+[tool.setuptools]
+py-modules = ["evaluation", "selection"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
